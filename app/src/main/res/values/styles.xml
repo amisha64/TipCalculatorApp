@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Tip_Calculator.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="Widget.Tip_Calculator.CompoundButton.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="Widget.Tip_Calculator.CompoundButton.RadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="android:paddingStart">2dp</item>
+    </style>
+</resources>

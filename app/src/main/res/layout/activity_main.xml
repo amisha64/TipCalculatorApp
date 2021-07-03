@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/iconcost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/icon_store"
+            app:layout_constraintBottom_toTopOf="@+id/iconservice"
+            app:layout_constraintEnd_toStartOf="@+id/etcost"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etcost"
+            app:srcCompat="@drawable/ic_store" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etcost"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="163dp"
+            android:layout_marginBottom="27dp"
+            android:autofillHints=""
+            android:hint="@string/cost_of_service"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iconcost"
+            app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etcostinput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/iconservice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:contentDescription="@string/icon_service"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iconcost"
+            app:srcCompat="@drawable/ic_room_service" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="217dp"
+            android:layout_height="154dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginBottom="15dp"
+            android:checkedButton="@id/rbamazing"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="@id/textView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <RadioButton
+                android:id="@+id/rbamazing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/amazing_20" />
+
+            <RadioButton
+                android:id="@+id/rbgood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/good_18" />
+
+            <RadioButton
+                android:id="@+id/rbokay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/okay_15" />
+        </RadioGroup>
+
+        <Switch
+            android:id="@+id/switchround"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:checked="true"
+            android:text="@string/round_up_tip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/calculate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchround"
+            app:layout_constraintVertical_bias="0.068" />
+
+        <TextView
+            android:id="@+id/tipvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/calculate"
+            app:layout_constraintTop_toBottomOf="@+id/calculate"
+            tools:text="@string/tip_amount" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/icon_arrow"
+            app:layout_constraintBottom_toTopOf="@+id/calculate"
+            app:layout_constraintEnd_toStartOf="@+id/switchround"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iconservice"
+            app:srcCompat="@drawable/ic_round_up" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/Widget.Tip_Calculator.TextView"
+            android:layout_width="205dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/how_was_the_service"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+            app:layout_constraintEnd_toStartOf="@+id/radioGroup"
+            app:layout_constraintStart_toEndOf="@+id/iconservice"
+            app:layout_constraintTop_toBottomOf="@+id/etcost" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
